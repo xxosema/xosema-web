@@ -7,7 +7,17 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Xose Rodríguez — Projects</title>
 <style>
+  
+/* Kill any leftover bottom spacing in mobile Chrome */
+html, body { margin: 0; padding: 0 !important; }
+body { padding-bottom: 0 !important; }
 
+/* Por si quedase algún bottom menu fantasma en una versión cacheada */
+#bottomMenu { display: none !important; height: 0 !important; }
+
+/* Evita margen extra del último bloque en el flujo */
+.wrap > *:last-child,
+section:last-of-type { margin-bottom: 0 !important; }
 /* Minimal CSS that keeps the "no-CSS" look */
 html, body { margin: 0; background: #fff; color: #000; }
 .wrap { max-width: 740px; margin: 0 auto; padding: 24px 16px; }
