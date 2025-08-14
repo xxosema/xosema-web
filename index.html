@@ -8,22 +8,6 @@
 <title>Xose Rodríguez — Projects</title>
 <style>
 
-  body {
-  cursor: none; /* ocultamos el cursor normal */
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  width: 50px; /* tamaño horizontal del cursor */
-  height: 50px; /* tamaño vertical del cursor */
-  background: black; /* color del cursor */
-  border-radius: 50%; /* opcional: círculo */
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 999999;
-}
-
 body {
   position: relative;
 }
@@ -177,12 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
-</script>
-
-  <script>
-document.addEventListener("mousemove", function(e) {
-  const cursor = document.body.querySelector("body::after");
 });
 </script>
 
