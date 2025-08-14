@@ -102,13 +102,17 @@ section { margin: 24px 0 28px; }
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-    if (!link.href.includes(window.location.hostname)) {
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
-    }
-  });
+  // Si el ancho mínimo es 1024px, consideramos "desktop"
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+      if (!link.href.includes(window.location.hostname)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  }
 });
+</script>
 </script>
 </body>
 </html>
