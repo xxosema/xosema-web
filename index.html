@@ -11,22 +11,19 @@
   /* Minimal CSS that keeps the "no-CSS" look */
 html, body {
   margin: 0;
-  padding: 0;
-}
-
-body {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
+  height: auto !important;
 }
 
-section:last-of-type {
-  margin-bottom: 0 !important;
+* {
   padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 @supports (padding: max(0px)) {
-  body {
-    padding-bottom: max(0px) !important; /* ignora el safe area */
+  html, body {
+    padding-bottom: max(0px, env(safe-area-inset-bottom)) !important;
   }
 }
 html, body {
