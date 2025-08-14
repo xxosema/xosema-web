@@ -137,7 +137,19 @@ section {
 <a href="https://mail.google.com/" rel="noopener">→ mail.google.com</a>
 <a href="https://apps.apple.com/app" rel="noopener">→ apps.apple.com</a>
 </div></section></div>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Si el ancho mínimo es 1024px, consideramos "desktop"
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+      if (!link.href.includes(window.location.hostname)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  }
+});
+</script>
 
 </body>
 </html>
