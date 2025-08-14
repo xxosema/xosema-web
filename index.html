@@ -20,60 +20,6 @@ a { text-decoration: underline; } /* keep default underline */
   h2 { margin-top: 28px; }
 }
 
-#bottomMenu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 8px;
-  text-align: center;
-  border-top: 1px solid #000;
-}
-#bottomMenu a {
-  color: blue;
-  text-decoration: underline;
-}
-
-#bottomMenu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 10px;
-  text-align: center;
-  border-top: 1px solid #000;
-  z-index: 9999;
-}
-#bottomMenu a {
-  color: blue;
-  text-decoration: underline;
-  font-size: 16px;
-}
-
-/* Reserve space for the fixed bottom menu so it doesn't get hidden/off-screen */
-body { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
-
-#bottomMenu {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: env(safe-area-inset-bottom, 0px);
-  background: #fff;
-  padding: 10px 12px;
-  text-align: center;
-  border-top: 1px solid #000;
-  z-index: 999999;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
-}
-
-#bottomMenu a {
-  color: blue;
-  text-decoration: underline;
-  font-size: 16px;
-}
-
 /* Micro-tuning for rhythm and readability */
 h2 { font-size: 20px; font-weight: 700; margin: 24px 0 10px; }
 section { margin: 24px 0 28px; }
